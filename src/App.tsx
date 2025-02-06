@@ -3,22 +3,9 @@ import autofit from 'autofit.js';
 import './App.css';
 import EChartsComponent from './components/basic-chart';
 import { get } from './request';
+import Layout from './layout';
 
 const App = () => {
-  const ref = useRef(null);
-  const option = {
-    title: { text: '柱状图' },
-    tooltip: {},
-    xAxis: { data: ['A', 'B', 'C', 'D', 'E'] },
-    yAxis: {},
-    series: [
-      {
-        name: '销量',
-        type: 'bar',
-        data: [5, 20, 36, 10, 10],
-      },
-    ],
-  };
   useEffect(() => {
     autofit.init({
       dh: 1080,
@@ -34,13 +21,7 @@ const App = () => {
     });
   }, []);
 
-  return (
-    <div className="w-full h-full bg-black">
-      <div className="w-[500px] h-[500px] bg-white">
-        <EChartsComponent options={option} ref={ref}/>
-      </div>
-    </div>
-  );
+  return <Layout></Layout>;
 };
 
 export default App;
