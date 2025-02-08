@@ -7,7 +7,7 @@ import TimelineComponent from '@/components/time-component';
 const Layout: React.FC = () => {
   const element = useRoutes(routes);
   return (
-    <div className="w-full h-full bg-[#001620] flex flex-col overflow-hidden text-[#63ECFF]">
+    <div className="w-[1920px] h-[1080px] bg-[#001620] flex flex-col overflow-hidden text-[#63ECFF]">
       <header
         className="flex justify-between items-center bg-gray-100 h-[110px] bg-contain px-16 py-10"
         style={{ backgroundImage: 'url("/images/header-bg.svg")' }}
